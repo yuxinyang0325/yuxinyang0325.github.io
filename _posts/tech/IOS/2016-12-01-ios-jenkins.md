@@ -6,12 +6,13 @@ tags: iOS, Jenkins, 持续集成, CI
 description:
 ---
 
+
 >随着项目的不断推进，参与的人员越来越多，内容越来越复杂，构建项目本身可能就变成了复杂又耗时的工作。持续集成(Continuous Integration,简称CI)，作为一种团队开发实践方法，很好的解决这些问题。它可以让开发团队专注于业务需求，让测试团队更快的构建项目检测问题，加快项目进度。
 
 
 [Jenkins](https://baike.baidu.com/item/Jenkins?fr=aladdin)作为一种[持续集成](https://baike.baidu.com/item/持续集成)的方案，由于其丰富的插件和较高的可控性，备受大家喜爱。
 
-####安装Jenkins
+### 安装Jenkins
 * 首先到[官方网站](https://jenkins.io)下载Jenkins安装包，由于它是Java项目所以依赖[JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
  [下载JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
@@ -32,7 +33,7 @@ $ **open /Applications/Jenkins/jenkins.war**
 $ **java -jar /Applications/Jenkins/jenkins.war** 
 启动Jenkins
 
-####配置Jenkins
+### 配置Jenkins
 1. 打开http://localhost:8080会出现重设初始密码的界面。根据界面中的路径提示去相应文件中取出密码。
 2. 创建一个用户
 3. 安装插件[Xcode integration](https://wiki.jenkins.io/display/JENKINS/Xcode+Plugin)和[Keychains and Provisioning Profiles Management]()
@@ -122,18 +123,18 @@ Credentials填写SVN用户。
 
 
 
-####构建后的操作
+### 构建后的操作
 构建完成后，可以选择将ipa包上传到自己的服务器，也可以用fir或者蒲公英等第三方服务。
 * 参考http://blog.fir.im/jenkins/使用官方工具[fir-plugin-1.9.5.hpi](http://7xju1s.com1.z0.glb.clouddn.com/fir-plugin-1.9.5.hpi)插件上传ipa包到fir。
 
-####遇到的问题
+### 遇到的问题
 * Xcode版本高于9.0 ，使用Xcode Builder构想项目的时候会出现导出ipa失败。
 
 ![导出ipa失败](http://upload-images.jianshu.io/upload_images/3096441-b4b511e1c26916a5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-######error: exportArchive: "Your.app" requires a provisioning profile with the Push Notifications feature.
+###### error: exportArchive: "Your.app" requires a provisioning profile with the Push Notifications feature.
 
-######Error Domain=IDEProvisioningErrorDomain Code=9 ""Your.app" requires a provisioning profile with the Push Notifications feature." UserInfo={NSLocalizedDescription="Your.app" requires a provisioning profile with the Push Notifications feature., NSLocalizedRecoverySuggestion=Add a profile to the "provisioningProfiles" dictionary in your Export Options property list.}
+###### Error Domain=IDEProvisioningErrorDomain Code=9 ""Your.app" requires a provisioning profile with the Push Notifications feature." UserInfo={NSLocalizedDescription="Your.app" requires a provisioning profile with the Push Notifications feature., NSLocalizedRecoverySuggestion=Add a profile to the "provisioningProfiles" dictionary in your Export Options property list.}
 ###### ** EXPORT FAILED **
 
 最后错误提示，EXPORT FAILED，推断导出ipa包时出的错。根据最后提示
@@ -164,7 +165,7 @@ ExportOptions.plist文件请放在Jinkens的workspace，构建项目文件夹下
 脚本中ExportOptions.plist路径可以自定义。
 ![ExprotOptions.plist位置](http://upload-images.jianshu.io/upload_images/3096441-8f3cfc6433b27d2d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-####扩展
+### 扩展
 * 其他问题可以参考[Jenkins自动打包遇到的问题](http://www.jianshu.com/p/d727d08bb274)
 
 * Jenkins配置Android构建，请[点击这里](https://www.pgyer.com/doc/view/jenkins)

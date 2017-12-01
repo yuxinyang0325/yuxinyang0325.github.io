@@ -9,7 +9,7 @@ description:
 
 在进入证书处理步骤前，让我们先在Mac上创建CSR文件，这是申请证书的必要条件，如果你已经创建过那么可以直接跳到**申请证书**部分😉
 
-###创建CSR文件
+### 创建CSR文件
 * 打开钥匙串，选择证书助理**->**从证书颁发机构请求证书
 ![创建CSR文件_图1.jpg](http://upload-images.jianshu.io/upload_images/3096441-1b19c0c06960b818.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -21,7 +21,7 @@ description:
 
 ---
 
-###申请证书
+### 申请证书
 
 * 首先进入苹果开发者网站点击[这里](https://developer.apple.com)
 * 接下来进入证书设置**Certificates, Identifiers & Profiles**
@@ -55,7 +55,7 @@ PS(如果已经有APP ID那么可以直接看**创建Provisioning Profiles**)
 
 ---
 
-###创建iOS App IDs
+### 创建iOS App IDs
 
 *  点击Identifiers中的App IDs 选项，在右侧iOS App IDs点击➕号
 
@@ -77,7 +77,7 @@ PS(如果已经有APP ID那么可以直接看**创建Provisioning Profiles**)
 
 ---
 
-###创建Provisioning Profiles
+### 创建Provisioning Profiles
 
 * 选择**Provisioning Profiles**
 
@@ -109,7 +109,7 @@ PS(如果已经有APP ID那么可以直接看**创建Provisioning Profiles**)
 
 * 先别着急下载安装PP文件及证书还有一个步骤没有完成
 
-###添加调试机器的Device ID
+### 添加调试机器的Device ID
 在真机调试前还需要一个步骤就是把准备用于调试用机的Device ID添加到开发PP文件里。
 **(如果你只创建了发布证书及发布PP文件，那么你还需要再创建开发证书及开发PP文件)**
 * 可用同一个CSR文件创建开发证书，区别就是所有选择发布**Distribution**的地方选择开发**Development**就可以了。
@@ -154,7 +154,7 @@ UDID不对时会有提示
 
 
 
-###Xcode8真机调试
+### Xcode8真机调试
 真机调试需要开发证书，如果还有创建的话请参考前面**添加调试机器的Device ID**部分
 
 * 用Xcode8新建一个iOS工程
