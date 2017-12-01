@@ -180,4 +180,4 @@ UDID不对时会有提示
 
 ## 最后
 
-感谢收看，如果对大家有帮助，请[github上follow和star](https://github.com/yuxinyang0325)，本文发布在[逆流的简书博客](http://www.jianshu.com/u/30300da6b66b)，转载请注明出处
+感谢阅读，如果对大家有帮助，请在[github上follow和star](https://github.com/yuxinyang0325)，本文发布在[逆流的简书博客](http://www.jianshu.com/u/30300da6b66b)，转载请注明出处
