@@ -33,12 +33,17 @@ description:
 
 * iOS 7 ~ iOS 10
 状态栏：**20pt**
+
 导航高度：**44pt**
+
 合计可用高度：**64pt**
 
 * iOS 11 
+
 非iPhoneX：**64pt**
+
 iPhoneX：**44pt(状态栏) + 44pt = 88pt**
+
 ### iPhoneX 用到的宏
 
 ```objc
@@ -69,9 +74,12 @@ controller.tabBar.backgroundColor = [UIColor whiteColor];//添加你的颜色
 
 ### iPhoneX 在push进入 webView页面时，底部有黑边闪过
 
-这也是由iOS11的safeArea引起的问题。检查webView的高度是否是(屏幕高度-（导航栏高度+状态栏高度))
+这是由于iOS11的safeArea引起的问题。检查webView的高度是否是(屏幕高度-（导航栏高度+状态栏高度))
+
 解决方案：
+
 设置webView.scrollView的contentInsetAdjustmentBehavior
+
 ```
 if (@available(iOS 11.0, *)) {
     webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
