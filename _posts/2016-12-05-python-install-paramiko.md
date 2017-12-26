@@ -73,6 +73,6 @@ easy_install 和pip都是Python包管理器，目前官方更推荐用pip，我�
 * 方法1 终端执行 $ **pip install paramiko** 
 * 方法2 下载[paramiko](https://github.com/paramiko/paramiko)包，终端执行 $**python setup.py install**安装
 
-## 最后
+### 最后
 
 感谢阅读，如果对大家有帮助，请在[github上follow和star](https://github.com/yuxinyang0325)，本文发布在[逆流的简书博客](http://www.jianshu.com/p/3b572cdab266)，转载请注明出处

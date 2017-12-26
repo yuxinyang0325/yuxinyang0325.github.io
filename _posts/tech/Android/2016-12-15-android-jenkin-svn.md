@@ -63,6 +63,6 @@ Android Studio中Gradle构建项目位置
 * 可以选择把构建好的包上传到自己的服务器页或者[第三方下载平台](https://www.pgyer.com/doc/view/jenkins)。
 
 
-## 最后
+### 最后
 
 感谢阅读，如果对大家有帮助，请在[github上follow和star](https://github.com/yuxinyang0325)，本文发布在[逆流的简书博客](http://www.jianshu.com/p/c391f3aa6717)，转载请注明出处
