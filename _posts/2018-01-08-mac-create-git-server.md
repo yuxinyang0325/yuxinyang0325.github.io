@@ -37,6 +37,7 @@ $ ssh-keygen -t rsa
 ```
 
 * 把ssh rsa 公钥拷贝到Git Server端。
+
 ``` shell
 # 使用git用户登录，并创建.ssh 文件夹
 $ ssh git@yourComputerName.local mkdir .ssh
@@ -45,14 +46,17 @@ $ scp ~/.ssh/id_rsa.pub git@yourComputerName.local:.ssh/authorized_keys
 ```
 
 * 修改Git Server端的sshd_config文件
+
 ```shell
 $ ssh git@yourComputerName.local
 $ cd /etc
 $ sudo chmod 666 sshd_config
 ```
+
 注意：这里有个需要注意的地方，/etc文件夹可能没有sshd_config文件，只有有一个**sshd_config~previous**文件，那我们操作的文件就换成**sshd_config~previous**。
 
 * 修改sshd_config中的内容
+
 ```shell
 $ vi sshd_config 
 #PermitRootLogin yes      改为 PermitRootLogin no
@@ -67,11 +71,12 @@ $ vi sshd_config
 #UsePAM yes　　　　　　　　　　改为 UsePAM no
 
 #保存文件并退出
+
 ```
+
 ![sshd_config文件修改_1](http://upload-images.jianshu.io/upload_images/3096441-ad7f71304af88644.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![sshd_config文件修改_2](http://upload-images.jianshu.io/upload_images/3096441-d50b49cb621c0241.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 
 * 在Git Server端创建空的 repository
 
@@ -87,6 +92,7 @@ $ git init --bare # --bare 参数表明只是用来存储 pushes，不会当做�
 
 * 回到在Git Client端，创建本地仓库并提交。
 注意：先在终端中使用exit命令退出git用户。
+
 ```shell
 $ cd /Desktop/gitrepos/ #这里我使用和服务器相同路径
 $ mkdir newrepo
@@ -106,5 +112,5 @@ $ git push origin master
 
 
 ### 最后
-
 感谢阅读，如果对大家有帮助，请在[github上follow和star](https://github.com/yuxinyang0325)，本文发布在[逆流的简书博客](https://www.jianshu.com/p/df6c3f14f7f7)，转载请注明出处
+
