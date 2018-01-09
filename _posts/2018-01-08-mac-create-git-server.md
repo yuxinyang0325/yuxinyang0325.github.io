@@ -81,8 +81,9 @@ $ vi sshd_config
 * 在Git Server端创建空的 repository
 
 ```shell
-$ cd /Desktop/gitrepos/
-#这里的路径是自定义的，创建你需要路径
+$ cd ~
+$ cd Desktop/gitrepos/
+#这里的路径是自定义的，创建你需要路径, 
 
 $ mkdir newgitrepo.git # 同上 自定义名称
 $ cd newrepo.git
@@ -94,7 +95,8 @@ $ git init --bare # --bare 参数表明只是用来存储 pushes，不会当做�
 注意：先在终端中使用exit命令退出git用户。
 
 ```shell
-$ cd /Desktop/gitrepos/ #这里我使用和服务器相同路径
+$ cd ~
+$ cd Desktop/gitrepos/ #这里我使用和服务器相同路径
 $ mkdir newrepo
 $ git init
 $ touch README

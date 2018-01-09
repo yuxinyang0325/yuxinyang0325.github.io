@@ -1,7 +1,7 @@
 ---
 layout: post
 title: iPhoneX适配
-category: 技术
+category: iOS
 tags: iOS, iPhoneX, 适配
 description:
 ---
